@@ -1,0 +1,74 @@
+
+<HTML>
+<head>
+<link href="style.css" rel="stylesheet">
+</head>
+<SCRIPT language="JavaScript">
+
+imageNum = 0;
+theImages = new Array();
+
+theImages[0] = new Image();
+theImages[0].src = "lite1.jpg";
+
+theImages[1] = new Image();
+theImages[1].src = "lite2.jpg";
+
+theImages[2] = new Image();
+theImages[2].src = "lite3.jpg";
+
+function n_1(){
+	if (imageNum==2){	
+	imageNum=0;
+	document.image1.src = theImages[0].src;
+	}
+	else{
+	imageNum++;
+	document.image1.src = theImages[imageNum].src;
+	}
+}
+
+function n_2(){
+	if (imageNum==0){	
+	imageNum=2;
+	document.image1.src = theImages[2].src;
+	}
+	else{
+	imageNum--;
+	document.image1.src = theImages[imageNum].src;
+	}
+}
+
+function showhide(e){
+	
+	switch(document.all(e).style.display)
+		{
+			case "none":
+			document.all(e).style.display="block";
+			break;
+			case "block":
+			document.all(e).style.display="none";
+			break;
+		}
+	}
+
+</script>
+<Body bgcolor = "#333333" text = "white" LINK="white" VLINK="white" ALINK="red"> 
+<div onclick='showhide("mn")' style="background-color: #555555;position: absolute; top:4.5%;"><div class="fallmn">Выберите персонажа:</div></div>
+<div id="mn" style="display: none; background-color: #555555; position: absolute; top:9%;left: 6.1%">
+<div class="fallmn"><a HREF="lite.html" TARGET="page"> Лайт Ягами </a></div>
+<div class="fallmn"><a HREF="L.html" TARGET="page">    L          </a></div>
+<div class="fallmn"><a HREF="misa.html" TARGET="page"> Миса Аманэ </a></div>
+<div class="fallmn"><a HREF="ruk.html" TARGET="page">  Рюк        </a></div>
+</div>
+<div class='txt'> <font size=4>
+<h2 align=center style="margin-top: 5%">Лайт Ягами</h2>
+<img align=right name="image1" width=400 style="margin-left: 8%; margin-right:3%" src="lite1.jpg">
+<p><i>"Я – зло? Я – справедливость! Я тот, кто пришёл в сей мир, чтобы поддерживать справедливость и защищать слабых... я – бог! Но те, кто противятся богу... они – зло!"</i>
+<p>Лайт Ягами (夜神月 Ягами Райто) — главный герой серии «Тетрадь Смерти». После обнаружения тетради смерти он решает использовать её, чтобы избавить мир от преступников. Его убийства в конце концов были названы японцами работой «Киры».
+<div>
+<img src="n_1.png" width="5%" onclick="n_1()" style="position: absolute; top:45%; right:2%">
+<img src="n_2.png" width="5%" onclick="n_2()" style="position: absolute; top:45%; right:45%">
+
+</body>
+</HTML>

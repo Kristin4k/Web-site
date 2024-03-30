@@ -1,0 +1,52 @@
+<HTML>
+<script language = "JavaScript">
+
+function f1()
+{
+var data= new Date();
+var hour = data.getHours();
+var min= data.getMinutes();
+var sec= data.getSeconds();
+var time="";
+
+if (min<10){
+min="0"+min;
+}
+
+if (sec<10){
+sec="0"+sec;
+}
+min += "";
+hour += "";
+sec += "";
+for (var i=0; i<hour.length; i++) {
+var ch="h"+i;
+document.getElementById(ch).src="n"+hour.charAt(i)+".png";
+}
+
+for (var i=0; i<min.length; i++) {
+var ch="m"+i;
+document.getElementById(ch).src="n"+min.charAt(i)+".png";
+}
+
+for (var i=0; i<sec.length; i++) {
+var ch="s"+i;
+document.getElementById(ch).src="n"+sec.charAt(i)+".png";
+}
+
+
+
+setTimeout("f1()",300);
+}
+
+</script>
+<meta charset="utf-8">
+<BODY TEXT="white" bgcolor = "black" onload="f1()" style="background-size: 100% 100%;overflow:hidden"> 
+	  
+<img style="position: absolute; right: 41%; top: 0%" height = "100%" src="title.jpg">
+
+<div align=right style="position: absolute; top:10%; right:2%">
+<img id="h0" height = 30><img id="h1" height = 30><img src="2dn.png" height = 30><img id="m0" height = 30><img id="m1" height = 30><img src="2dn.png" height = 30><img id="s0" height = 30><img id="s1" height = 30><img id="t0" height = 30>
+</div>
+</body>
+</HTML>

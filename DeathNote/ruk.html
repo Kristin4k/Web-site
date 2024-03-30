@@ -1,0 +1,74 @@
+
+<HTML>
+<head>
+<link href="style.css" rel="stylesheet">
+</head>
+<SCRIPT language="JavaScript">
+
+imageNum = 0;
+theImages = new Array();
+
+theImages[0] = new Image();
+theImages[0].src = "ruk1.jpg";
+
+theImages[1] = new Image();
+theImages[1].src = "ruk2.jpg";
+
+theImages[2] = new Image();
+theImages[2].src = "ruk3.jpg";
+
+function n_1(){
+	if (imageNum==2){	
+	imageNum=0;
+	document.image1.src = theImages[0].src;
+	}
+	else{
+	imageNum++;
+	document.image1.src = theImages[imageNum].src;
+	}
+}
+
+function n_2(){
+	if (imageNum==0){	
+	imageNum=2;
+	document.image1.src = theImages[2].src;
+	}
+	else{
+	imageNum--;
+	document.image1.src = theImages[imageNum].src;
+	}
+}
+
+function showhide(e){
+	
+	switch(document.all(e).style.display)
+		{
+			case "none":
+			document.all(e).style.display="block";
+			break;
+			case "block":
+			document.all(e).style.display="none";
+			break;
+		}
+	}
+
+</script>
+<Body bgcolor = "#333333" text = "white" LINK="white" VLINK="white" ALINK="red"> 
+<div onclick='showhide("mn")' style="background-color: #555555;position: absolute; top:4.5%;"><div class="fallmn">Выберите персонажа:</div></div>
+<div id="mn" style="display: none; background-color: #555555; position: absolute; top:9%;left: 6.1%">
+<div class="fallmn"><a HREF="lite.html" TARGET="page"> Лайт Ягами </a></div>
+<div class="fallmn"><a HREF="L.html" TARGET="page">    L          </a></div>
+<div class="fallmn"><a HREF="misa.html" TARGET="page"> Миса Аманэ </a></div>
+<div class="fallmn"><a HREF="ruk.html" TARGET="page">  Рюк        </a></div>
+</div>
+<div class='txt'> <font size=4>
+<h2 align=center style="margin-top: 5%">Рюк</h2>
+<img align=right name="image1" width=400 style="margin-left: 8%; margin-right:3%" src="ruk1.jpg">
+<p><i>"Вот и пробил твой час, Лайт. Я же тебе говорил в самом начале нашего знакомства, что наступит день, когда я запишу твое имя в свою тетрадь...Должен тебе признаться, я довольно неплохо провел время в твоей компании, а иногда мне даже было весело."</i>
+<p>Рюк ( リューク , Ръюк) — шинигами, который косвенно отдал тетрадь смерти Лайту Ягами после того, как ему наскучило царство Шинигами. В попытке развлечь себя, он крадет вторую тетрадь и бросает её в человеческий мир, чтобы кто-нибудь её нашёл. Эту тетрадь нашёл Лайт, который воспользовался ей в попытке избавить мир от зла и несправедливости, удовлетворяя потребность Рюка в развлечениях.
+<div>
+<img src="n_1.png" width="5%" onclick="n_1()" style="position: absolute; top:45%; right:2%">
+<img src="n_2.png" width="5%" onclick="n_2()" style="position: absolute; top:45%; right:45%">
+
+</body>
+</HTML>

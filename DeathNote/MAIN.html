@@ -1,0 +1,46 @@
+<HTML>
+<head>
+</head>
+<script language = "JavaScript">
+count = 0;
+function f2(){
+document.body.style.backgroundImage = "url('pages2.jpg')";
+	document.Form1.outp.style.color = '#FF1133';
+}
+function f1(){
+if (count<2)
+	{
+	var c = document.Form1.inp.value;
+	document.Form1.inp.value="";
+	document.Form1.outp.value+=c+"\n";
+	count++;
+	}
+else if(count==2)
+	{
+	var c = document.Form1.inp.value;
+	document.Form1.inp.value="";
+	document.Form1.outp.value+=c+"\n";
+	setTimeout('f2()', 800);
+	count++;
+	}
+
+
+}
+
+</script>
+<body background="pages.jpg" bgcolor = "#333333" text = "black" style="background-size: 100% 100%;overflow:hidden">
+<FORM name=Form1>
+
+<font size=6>
+<INPUT style="background:none transparent; border:none transparent;">
+<p><textarea name = "outp" rows = "4" cols = "20"style=" background:none transparent; transform:rotate(-17deg); color: #555555; font-size: 44pt; line-height: 2.8em; position: absolute; top:8%; left:22%; border:none transparent; font-family: 'Comic Sans MS', 'Comic Sans', cursive; font-style: italic; overflow:hidden"></textarea>
+<div style="position: absolute; top:40%; left:40%">
+<p align=center><i> Введите имя:</i> <br>
+<INPUT NAME="inp" TYPE=TEXTBOX onchange="f1()">
+</font>
+</div>
+
+<div style="position: absolute; bottom:3%; right:1%;color: white"> Ни одна математичка при<br> написании сайта не пострадала</div>
+</Form>
+</body>
+</HTML>
